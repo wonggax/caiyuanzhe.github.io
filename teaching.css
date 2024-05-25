@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.semester {
+    margin-bottom: 20px;
+}
+
+.semester h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.semester ul {
+    list-style: none;
+    padding: 0;
+}
+
+.semester ul li {
+    margin-bottom: 10px;
+}
+
+.semester ul li a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.semester ul li a:hover {
+    text-decoration: underline;
+}

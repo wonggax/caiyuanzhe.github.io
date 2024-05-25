@@ -1,0 +1,136 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff !important;
+    /* 强制背景颜色为白色 */
+    color: #333333 !important;
+    /* 强制文本颜色为黑色 */
+}
+
+header input[type="text"]:focus {
+    outline: none;
+    /* 去除聚焦时的边框 */
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    /* 添加聚焦时的阴影 */
+}
+
+header input[type="text"]::placeholder {
+    color: #999999;
+    /* 占位符颜色 */
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter-buttons button:first-child {
+    margin-left: 0;
+}
+
+.filter-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.publications {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.year-section h2 {
+    font-size: 24px;
+    color: #007bff;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.year-section ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.year-section li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.year-section .icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.year-section .authors {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.year-section .title {
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.year-section .publication {
+    color: #555555;
+}
+
+.title {
+    width: 500px;
+    text-align: center;
+}
+
+.publication {
+    width: 500px;
+    text-align: right;
+}
+
+.authors {
+    width: 500px;
+    text-align: left;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab</title>
+    <link rel="stylesheet" href="home-page.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html" onclick="loadPage('about.html', event)">About</a></li>
+                <li><a href="research.html" onclick="loadPage('research.html', event)">Research</a></li>
+                <li><a href="publications.html" onclick="loadPage('publication.html', event)">Publications</a></li>
+                <li><a href="teaching.html" onclick="loadPage('teaching.html', event)">Teaching</a></li>
+                <li><a href="team.html" onclick="loadPage('team.html', event)">Team</a></li>
+                <li><a href="software.html" onclick="loadPage('software.html', event)">Software</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <div class="container">
+            <div class="header">
+                <p class="mission">研发方向：致力于医疗耗材和医疗器械的研发，专注于提升医疗服务的质量和效率</p>
+            </div>
+            <div class="profile">
+                <div class="profile-text">
+                    <p><strong>Jimeng Sun</strong> is the Health Innovation Professor at Computer Science Department and Carle's Illinois College of Medicine at University of Illinois, Urbana-Champaign. Previously, he was at the College of Computing at Georgia Institute of Technology.</p>
+                    <p>His research interest is on artificial intelligence (AI) for healthcare:</p>
+                    <p>
+                        <a href="#">Deep learning for drug discovery</a>, 
+                        <a href="#">Clinical trial optimization</a>, 
+                        <a href="#">Computational phenotyping</a>, 
+                        <a href="#">Clinical predictive modeling</a>, 
+                        <a href="#">Treatment recommendation</a>, 
+                        <a href="#">Health monitoring</a>.
+                    </p>
+                    <p>Here are more info about me:</p>
+                    <ul>
+                        <li><a href="#">Jimeng's Google Scholar page</a></li>
+                        <li><a href="#">Jimeng's DBLP page</a></li>
+                        <li><a href="#">Jimeng's PubMed page</a></li>
+                        <li>Email: jimeng.sun@gmail.com</li>
+                        <li>Twitter: @jimeng</li>
+                        <li>LinkedIn: <a href="#">jimengsun</a></li>
+                        <li>Youtube: <a href="#">AI for Health</a></li>
+                        <li>Facebook page: <a href="#">realsunlab</a></li>
+                    </ul>
+                </div>
+                <div class="profile-photo">
+                    <img src="home-page-img.jpg" alt="Jimeng Sun">
+                </div>
+            </div>
+            <div class="research-topics">
+                <h2>Current research topics</h2>
+                <div class="topics">
+                    <div class="topic"><a href="#">Generative models</a></div>
+                    <div class="topic"><a href="#">Clinical trial</a></div>
+                    <div class="topic"><a href="#">Predictive model</a></div>
+                    <div class="topic"><a href="#">Drug discovery</a></div>
+                    <div class="topic"><a href="#">Tensor factorization</a></div>
+                </div>
+            </div>
+            <div class="news">
+                <h2>News</h2>
+                <p><strong>Oct 2023</strong></p>
+                <p>Recent publications from Sunlab:</p>
+                <p><strong>Nature Communications</strong>:</p>
+                <ul>
+                    <li>Theodorou, Brandon, Cao Xiao, and Jimeng Sun. 2023. "Synthesize High-Dimensional Longitudinal Electronic Health Records via Hierarchical Autoregressive Language Model." <em>Nature Communications</em> 14 (1): 5305.</li>
+                    <li>Gao, Jian, Joey Heitz, Christina Mack, Lucas Glass, Adam Cross, and Jimeng Sun. 2023. "Evidence-Driven Spatiotemporal COVID-19 Hospitalization Prediction with Ising Dynamics." <em>Nature Communications</em> 14 (1): 3093.</li>
+                </ul>
+                <p><strong>EMNLP</strong>:</p>
+                <ul>
+                    <li>Wang, Zifeng, Cao Xiao, and Jimeng Sun. 2023. "AutoTrial: Prompting Language Models for Clinical Trial Design." In Proceedings of EMNLP.</li>
+                </ul>
+                <p><strong>NeurIPS</strong>:</p>
+                <ul>
+                    <li>Chaoqi Yang, M. Brandon Westover, Jimeng Sun. 2023. "BIOT: Cross-data Biosignal Learning in the Wild." In Proceedings of NeurIPS.</li>
+                    <li>Siddhartha Laghuwani, Zhen Lin, Jimeng Sun. 2023. "CoDrug: Conformal Drug Property Prediction with Density Estimation under Covariate Shift." In Proceedings of NeurIPS.</li>
+                    <li>Zhenbena Wu, Huaxiu Yao, David Leibovitz, Jimeng Sun. An Iterative Self-Learning Framework for Medical Domain Generalization.</li>
+                </ul>
+            </div>
+            <div class="positions">
+                <h2>Seeking Position at Sunlab</h2>
+                <p>I am always looking for gifted and devoted PhD students, postdocs.</p>
+                <p>Check out our <a href="#">job posting</a>. Please submit your applications by emailing sunlab1280@gmail.com with subject "Postdoc application", "PhD application" or "Intern application". Please include your CV, one of your paper and answer the following questions in plain text.</p>
+                <p>For PhD applicants, priority will be given to those with relevant publications, especially in venues where my lab has published, and contributors to the <a href="#">py-health repo</a>.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        function loadPage(pageUrl, event) {
+            event.preventDefault(); // 阻止默认行为
+
+            fetch(pageUrl)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('main-content').innerHTML = html;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        window.onload = function() {
+            // 默认加载主页内容
+            fetch()
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('main-content').innerHTML = html;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
